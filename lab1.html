@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NeoTech 2026 | Official Event Portal</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+body{
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+color:white;
+}
+
+/* HERO SECTION */
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+.hero video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+}
+.hero-content{
+background:rgba(0,0,0,0.6);
+height:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+.hero h1{
+font-size:4rem;
+letter-spacing:3px;
+animation: glow 2s infinite alternate;
+}
+@keyframes glow{
+from{ text-shadow:0 0 10px cyan;}
+to{ text-shadow:0 0 30px cyan;}
+}
+.hero p{
+font-size:1.3rem;
+margin-top:10px;
+}
+.hero button{
+margin-top:20px;
+padding:15px 30px;
+border:none;
+background:#00ffff;
+color:black;
+font-size:1.1rem;
+cursor:pointer;
+border-radius:30px;
+}
+
+/* EVENT SECTION */
+.section{
+padding:60px 10%;
+}
+.event-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+.event-box img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 20px black;
+}
+
+/* FORM */
+form{
+background:rgba(0,0,0,0.7);
+padding:30px;
+border-radius:20px;
+}
+input, select, textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:#111;
+border:none;
+color:white;
+border-bottom:2px solid cyan;
+}
+label{
+margin-top:15px;
+display:block;
+}
+.submit-btn{
+margin-top:20px;
+background:cyan;
+color:black;
+padding:12px;
+border:none;
+border-radius:20px;
+font-size:1.1rem;
+}
+
+/* FOOTER */
+footer{
+background:black;
+text-align:center;
+padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+<source src="cinematic-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO WITH MOVIE STYLE VIDEO -->
+<div class="hero">
+<video autoplay muted loop>
+<source src="C:\Users\STUDENTS\Downloads\Yellow Modern Business Service Promotion Ads Video.mp4"type="video/mp4">
+</video>
+
+<div class="hero-content">
+<h1>NeoTech 2026</h1>
+<p>The Future of Technology Starts Here</p>
+<button onclick="document.getElementById('register').scrollIntoView()">Join Now</button>
+</div>
+</div>
+
+<!-- EVENT DETAILS -->
+<section class="section">
+<div class="event-box">
+<img src="event-poster.jpg">
+<div>
+<h2>About the Event</h2>
+<p>
+NeoTech 2026 is a global technology festival featuring AI, Robotics,
+Cyber Security, and Web 3.0 innovations. Experience live demos,
+keynote sessions, and futuristic exhibitions.
+</p>
+</div>
+</div>
+</section>
+
+<!-- REGISTRATION FORM -->
+<section class="section" id="register">
+<h2 style="text-align:center;">Register Now</h2>
+<form>
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Date of Birth</label>
+<input type="date">
+
+<label>Gender</label>
+<select>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<label>Select Event</label>
+<select>
+<option>AI Conference</option>
+<option>Cyber Security</option>
+<option>Robotics Expo</option>
+<option>Hackathon</option>
+</select>
+
+<label>Why do you want to join?</label>
+<textarea rows="4"></textarea>
+
+<label>Upload ID</label>
+<input type="file">
+
+<input type="submit" value="Register" class="submit-btn">
+</form>
+</section>
+
+<footer>
+© 2026 NeoTech Festival | Designed with HTML5
+</footer>
+
+</body>
+</html>
